@@ -1,4 +1,5 @@
 ﻿using StudentApp200123.Action;
+using StudentApp200123.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +30,30 @@ namespace StudentApp200123.Pages
         private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
             FrameNavigation.frameView.GoBack();
+        }
+
+        private void BtnCreateUser_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                User userAdd = new User() 
+                { 
+                    Login = TxbLogin.Text,
+                    Password = PsbPassword.Password,
+                    Name = TxbName.Text,
+                    Surname = TxbSurname.Text,
+                    Patronomic = TxbPatronymic.Text,
+                    RoleId = 6
+                };
+
+                TestContext.connectPoint.User.Add(userAdd);
+                TestContext.connectPoint.SaveChanges();
+                MessageBox.Show("Пользователь успешно добавлен!", "Подтверждено", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

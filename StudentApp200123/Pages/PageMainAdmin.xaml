@@ -47,6 +47,20 @@
                     Binding="{Binding Role.Name}"
                     Width="*"
                     Header="Роль "/>
+
+                <DataGridTemplateColumn Width="110">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button 
+                                Content="Просмотреть..."
+                                Background="Transparent"
+                                BorderBrush="Transparent"
+                                Name="BtnSelectinfo"
+                                Click="BtnSelectinfo_Click"
+                                />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
 

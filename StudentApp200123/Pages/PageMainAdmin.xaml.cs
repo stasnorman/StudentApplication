@@ -25,12 +25,17 @@ namespace StudentApp200123.Pages
         public PageMainAdmin()
         {
             InitializeComponent();
-            GridUser.ItemsSource = TestContext.connectPoint.User.ToList();
+            GridUser.ItemsSource = TestContext.connectPoint.User.Where(x => x.RoleId == 6).ToList();
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
             FrameNavigation.frameView.GoBack();
+        }
+
+        private void BtnSelectinfo_Click(object sender, RoutedEventArgs e)
+        {
+            FrameNavigation.frameView.Navigate(new PageStudentInfo((sender as Button).DataContext as User));
         }
     }
 }

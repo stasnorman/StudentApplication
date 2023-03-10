@@ -12,31 +12,18 @@ namespace StudentApp200123.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class Discipline
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public User()
+        public Discipline()
         {
             this.Journal = new HashSet<Journal>();
         }
     
         public int Id { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
         public string Name { get; set; }
-        public string Surname { get; set; }
-        public string Patronomic { get; set; }
-
-        public string PersonalData
-        {
-            get {
-                return $"{Surname} {Name} {Patronomic}";
-            }
-        }
-        public int RoleId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Journal> Journal { get; set; }
-        public virtual Role Role { get; set; }
     }
 }

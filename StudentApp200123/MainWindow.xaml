@@ -11,15 +11,18 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="80"/>
+            <RowDefinition Height="30"/>
             <RowDefinition Height="281*"/>
-            <RowDefinition Height="73"/>
+            <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
-
+        <StackPanel 
+            Background="#0554F2"/>
         <Frame 
             Grid.Row="1"
             NavigationUIVisibility="Hidden"
             Name="FrmMain"
             />
+        <StackPanel Grid.Row="2" 
+                    Background="#D9501E"/>
     </Grid>
 </Window>

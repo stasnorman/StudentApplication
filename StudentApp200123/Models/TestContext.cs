@@ -8,6 +8,6 @@ namespace StudentApp200123.Models
 {
     internal class TestContext
     {
-        public static Test_2701Entities connectPoint { get; set; } = new Test_2701Entities();
+        public static Test_2701Entities1 connectPoint { get; set; } = new Test_2701Entities1();
     }
 }

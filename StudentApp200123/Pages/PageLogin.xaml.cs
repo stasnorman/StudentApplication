@@ -46,7 +46,8 @@ namespace StudentApp200123.Pages
                                MessageBoxImage.Information);
                         break;
 
-                        case 2:
+                        case 5:
+                        FrameNavigation.frameView.Navigate(new PageSetGrade());
                         MessageBox.Show($"Вы успешно авторизовались, {getUserInfo.Name}! Ваша роль: {getUserInfo.Role.Name}.",
                            "Уведомление системы",
                            MessageBoxButton.OK,

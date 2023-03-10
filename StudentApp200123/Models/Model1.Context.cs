@@ -13,10 +13,10 @@ namespace StudentApp200123.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Test_2701Entities : DbContext
+    public partial class Test_2701Entities1 : DbContext
     {
-        public Test_2701Entities()
-            : base("name=Test_2701Entities")
+        public Test_2701Entities1()
+            : base("name=Test_2701Entities1")
         {
         }
     
@@ -25,6 +25,8 @@ namespace StudentApp200123.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Discipline> Discipline { get; set; }
+        public virtual DbSet<Journal> Journal { get; set; }
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<User> User { get; set; }
     }

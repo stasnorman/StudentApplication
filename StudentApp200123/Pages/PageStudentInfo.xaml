@@ -1,0 +1,41 @@
+﻿<Page x:Class="StudentApp200123.Pages.PageStudentInfo"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:StudentApp200123.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageStudentInfo">
+
+    <Grid>
+
+        <StackPanel>
+            <TextBlock 
+                Name="TxbNameStudent"
+                Margin="5"/>
+            <TextBlock 
+                Margin="5"
+                Name="TxbLoginStudent"/>
+            <TextBlock 
+                Margin="5"
+                Name="DateTimeNow"/>
+
+            <DataGrid Height="200"
+                      IsReadOnly="True"
+                      AutoGenerateColumns="False"
+                      Name="GridGradeListStudent">
+                <DataGrid.Columns>
+                    <DataGridTextColumn 
+                        Width="*"
+                        Binding="{Binding Discipline.Name}"
+                        Header="Дисциплина"/>
+                    <DataGridTextColumn 
+                        Width="*"
+                        Binding="{Binding Grade}"
+                        Header="Оценка"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Page>

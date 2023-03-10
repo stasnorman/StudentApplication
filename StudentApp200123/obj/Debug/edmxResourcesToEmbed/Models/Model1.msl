@@ -1,6 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище Test_2701ModelContainer" CdmEntityContainer="Test_2701Entities">
+  <EntityContainerMapping StorageEntityContainer="Хранилище Test_2701ModelContainer" CdmEntityContainer="Test_2701Entities1">
+    <EntitySetMapping Name="Discipline">
+      <EntityTypeMapping TypeName="Test_2701Model.Discipline">
+        <MappingFragment StoreEntitySet="Discipline">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Journal">
+      <EntityTypeMapping TypeName="Test_2701Model.Journal">
+        <MappingFragment StoreEntitySet="Journal">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="DisciplineId" ColumnName="DisciplineId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Role">
       <EntityTypeMapping TypeName="Test_2701Model.Role">
         <MappingFragment StoreEntitySet="Role">

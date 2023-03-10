@@ -9,18 +9,46 @@
       Title="PageCreateUser">
 
     <Grid>
-        <TextBlock 
-            VerticalAlignment="Top"
-            HorizontalAlignment="Center"
-            Text="Создать пользователя"
-            />
 
+        <StackPanel
+            Orientation="Vertical">
+            <GroupBox Header="Введите логин"
+                      Margin="2.5">
+                <TextBox Name="TxbLogin"/>
+            </GroupBox>
+            <GroupBox Header="Введите пароль" Margin="2.5">
+                <PasswordBox Name="PsbPassword"/>
+            </GroupBox>
+            <GroupBox Header="Повторите введенный пароль"  Margin="2.5">
+                <PasswordBox Name="PsbRePassword"/>
+            </GroupBox>
+            <GroupBox Header="Введите Имя" Margin="2.5">
+                <TextBox Name="TxbName"/>
+            </GroupBox>
+            <GroupBox Header="Введите фамилию" Margin="2.5">
+                <TextBox Name="TxbSurname"/>
+            </GroupBox>
+            <GroupBox Header="Введите отчество" Margin="2.5">
+                <TextBox Name="TxbPatronymic"/>
+            </GroupBox>
+
+            <Button 
+                Name="BtnCreateUser"
+                Content="Создать пользователя"
+                Click="BtnCreateUser_Click"
+                Height="40"
+                />
         <Button 
             VerticalAlignment="Top"
             HorizontalAlignment="Right"
             Content="Вернуться назад"
             Name="BtnBack"
             Click="BtnBack_Click"
+            Background="Transparent"
+            BorderBrush="Transparent"
             />
+        </StackPanel>
+            
+
     </Grid>
 </Page>
